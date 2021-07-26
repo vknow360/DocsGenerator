@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="DocsGenerator.jnlp">
+  <information>
+    <title>DocsGenerator Tool</title>
+    <vendor>Sunny Gupta aka vknow360</vendor>
+    <description>Using this tool you can generate docs (with markdown support) in just few seconds</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="DocsGenerator.jar" size="32401" download="eager" />
+    <jar href="json-simple-1.1.jar" size="16046" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="500" height="350" main-class="com.sunny.DocsGenerator"  name="DocsGenerator" />
+  <update check="background"/>
+</jnlp>
