@@ -5,29 +5,28 @@
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onDragDropped="#onDragDrop" onDragOver="#onDragOv" prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sunny.DocsGenerator">
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onDragDropped="#onDragDrop" onDragOver="#onDragOv" prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sunny.DocsGenerator">
    <Button fx:id="generate" focusTraversable="false" layoutX="189.0" layoutY="175.0" mnemonicParsing="false" onAction="#generateDocs" text="Generate Docs" />
-   <FlowPane fx:id="flowPane" hgap="20.0" layoutX="5.0" layoutY="224.0" maxHeight="-Infinity" maxWidth="-Infinity" orientation="VERTICAL" prefHeight="112.0" prefWidth="494.0" rowValignment="BASELINE" visible="false">
+   <FlowPane fx:id="flowPane" hgap="20.0" layoutX="5.0" layoutY="224.0" orientation="VERTICAL" prefHeight="103.0" prefWidth="492.0" rowValignment="BASELINE" visible="false">
       <opaqueInsets>
          <Insets />
       </opaqueInsets>
       <padding>
          <Insets top="20.0" />
       </padding>
-      <ProgressBar fx:id="progress" prefHeight="18.0" prefWidth="471.0" progress="0.0" />
+      <ProgressBar fx:id="progress" prefHeight="18.0" prefWidth="487.0" progress="0.0" />
       <Label fx:id="result" text="Note will appear here" />
    </FlowPane>
-   <Label layoutX="347.0" layoutY="328.0" prefHeight="17.0" prefWidth="150.0" text="Made with ❤ by vknow360" textAlignment="RIGHT" underline="true">
+   <Hyperlink fx:id="about" focusTraversable="false" layoutX="340.0" layoutY="328.0" onMouseClicked="#showAbout" prefHeight="23.0" prefWidth="157.0" text="Made with ❤ by vknow360" textAlignment="RIGHT" underline="true">
       <effect>
          <Glow />
-      </effect></Label>
-   <HBox alignment="CENTER" layoutX="242.0" layoutY="134.0" prefHeight="35.0" prefWidth="127.0" spacing="7.0">
-      <children>
-         <Label fx:id="label" prefHeight="17.0" prefWidth="144.0" text="No file chosen" />
-      </children>
-      <padding>
-         <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
-      </padding>
-   </HBox>
+      </effect></Hyperlink>
+    <HBox alignment="CENTER" layoutX="242.0" layoutY="134.0" prefHeight="35.0" prefWidth="127.0" spacing="7.0">
+        <padding>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+        </padding>
+        <Label fx:id="label" prefHeight="17.0" prefWidth="144.0" text="No file chosen" />
+    </HBox>
    <Button fx:id="choose" focusTraversable="false" layoutX="162.0" layoutY="139.0" mnemonicParsing="false" onAction="#chooseFile" text="Choose aix" />
+   <CheckBox focusTraversable="false" graphicTextGap="3.0" layoutX="4.0" layoutY="327.0" mnemonicParsing="false" onAction="#checkChanged" prefHeight="17.0" prefWidth="135.0" text="Generate Docs as File" />
 </Pane>
